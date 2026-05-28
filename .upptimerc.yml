@@ -2,6 +2,10 @@
 owner: aaronsentell # Your GitHub organization or username, where this repository lives
 repo: my-status-page # The name of this repository
 
+# Setting to run once a year, because I'm controlling this with cron-job
+workflow-schedules:
+  uptime: "0 0 1 * *"
+
 sites:
 
   - name: Pour Decisions
