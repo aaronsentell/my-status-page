@@ -1,7 +1,7 @@
-url: $CIVIC_SITE
-status: down
-code: 0
-responseTime: 0
-lastUpdated: 2026-05-28T08:49:21.612Z
+url: $CONTACT_REPS
+status: up
+code: 200
+responseTime: 187
+lastUpdated: 2026-05-28T08:54:39.812Z
 startTime: 2026-05-28T08:29:17.950Z
 generator: Upptime <https://github.com/upptime/upptime>
