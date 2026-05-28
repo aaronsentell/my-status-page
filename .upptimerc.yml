@@ -7,7 +7,6 @@ workflow-schedules:
   uptime: "0 0 1 * *"
 
 sites:
-
   - name: Pour Decisions
     url: https://pour.madebyaaron.app
   - name: Round on Me
@@ -37,3 +36,8 @@ status-website:
       href: /
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
+
+# Discord notifications configuration
+notifications:
+  - type: discord
+    webhookUrl: $DISCORD_WEBHOOK_URL
