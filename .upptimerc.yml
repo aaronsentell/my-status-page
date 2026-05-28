@@ -23,7 +23,7 @@ sites:
   - name: Referral Site
     url: $REFERRAL_SITE
   - name: Civic Site
-    url: $CIVIC_SITE
+    url: $CONTACT_REPS
 
 status-website:
   # Your custom domain is set here
