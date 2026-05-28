@@ -4,7 +4,7 @@ repo: my-status-page # The name of this repository
 
 # Change to run every 15 minutes:
 workflowSchedule:
-uptime: "*/15 * * * *"
+  uptime: "*/15 * * * *"
 
 sites:
   - name: Project Website
