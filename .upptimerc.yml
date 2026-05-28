@@ -2,6 +2,10 @@
 owner: aaronsentell # Your GitHub organization or username, where this repository lives
 repo: my-status-page # The name of this repository
 
+# Change to run every 15 minutes:
+workflowSchedule:
+uptime: "*/15 * * * *"
+
 sites:
   - name: Project Website
     url: https://madebyaaron.app
