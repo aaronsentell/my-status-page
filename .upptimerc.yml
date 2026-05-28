@@ -4,7 +4,7 @@ repo: my-status-page # The name of this repository
 
 # Run every 15 minutes (with correct 2-space indentation)
 workflowSchedule:
-  uptime: "*/15 * * * *"
+  uptime: "*/10 * * * *"
 
 sites:
 
