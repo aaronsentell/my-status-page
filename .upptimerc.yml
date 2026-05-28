@@ -23,6 +23,8 @@ sites:
     url: $REFERRAL_SITE
   - name: Civic Site
     url: $CONTACT_REPS
+  - name: Test Site
+    url: https://this-is-a-fake-broken-url-test.com
 
 status-website:
   # Your custom domain is set here
