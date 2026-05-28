@@ -20,6 +20,10 @@ sites:
     url: https://madebyaaron.app
   - name: Personal Website (aaronsentell.com)
     url: https://aaronsentell.com
+  - name: Civic Site
+    url: $CIVIC_SITE
+  - name: Referral Site
+    url: $REFERRAL_SITE
 
 status-website:
   # Your custom domain is set here
