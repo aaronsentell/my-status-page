@@ -2,7 +2,7 @@
 owner: aaronsentell # Your GitHub organization or username, where this repository lives
 repo: my-status-page # The name of this repository
 
-# Change to run every 15 minutes:
+# Run every 15 minutes (with correct 2-space indentation)
 workflowSchedule:
   uptime: "*/15 * * * *"
 
@@ -21,19 +21,14 @@ sites:
     url: https://burn.madebyaaron.app
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
+  # Your custom domain is set here
+  cname: status.madebyaaron.app
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  name: Aaron's Status Page
+  introTitle: "**Aaron's App Status**"
+  introMessage: Real-time monitoring and status page for my personal websites and projects.
   navbar:
     - title: Status
       href: /
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
