@@ -149,16 +149,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/this-is-a-fake-broken-url-test.com.ico",
     "slug": "test-site",
     "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "uptime": "58.85%",
+    "uptimeDay": "58.85%",
+    "uptimeWeek": "58.85%",
+    "uptimeMonth": "58.85%",
+    "uptimeYear": "58.85%",
     "time": 0,
     "timeDay": 0,
     "timeWeek": 0,
     "timeMonth": 0,
     "timeYear": 0,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-05-28": 0
+    }
   }
 ]
