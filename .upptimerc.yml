@@ -324,6 +324,5 @@ status-website:
       setTimeout(function () { clearInterval(interval); }, 30000);
     })();
 
-notifications:
-  - type: slack
-    webhookUrl: $DISCORD_WEBHOOK_URL
+assignees:
+  - aaronsentell
