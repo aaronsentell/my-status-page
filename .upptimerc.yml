@@ -28,8 +28,8 @@ status-website:
   # Your custom domain is set here
   cname: status.madebyaaron.app
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Aaron's Status Page
-  introTitle: "**Aaron's App Status**"
+  name: Made by Aaron Status Page
+  introTitle: "**App Status**"
   introMessage: Real-time monitoring and status page for my personal websites and projects.
   navbar:
     - title: Status
