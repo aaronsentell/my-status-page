@@ -114,19 +114,19 @@
     "url": "https://burn.madebyaaron.app",
     "icon": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>",
     "slug": "spf-or-rip",
-    "status": "down",
-    "uptime": "99.99%",
-    "uptimeDay": "99.99%",
-    "uptimeWeek": "99.99%",
-    "uptimeMonth": "99.99%",
-    "uptimeYear": "99.99%",
-    "time": 1054,
-    "timeDay": 1086,
-    "timeWeek": 1054,
-    "timeMonth": 1054,
-    "timeYear": 1054,
+    "status": "up",
+    "uptime": "99.61%",
+    "uptimeDay": "99.33%",
+    "uptimeWeek": "99.61%",
+    "uptimeMonth": "99.61%",
+    "uptimeYear": "99.61%",
+    "time": 1070,
+    "timeDay": 1117,
+    "timeWeek": 1070,
+    "timeMonth": 1070,
+    "timeYear": 1070,
     "dailyMinutesDown": {
-      "2026-05-29": 0
+      "2026-05-29": 10
     }
   },
   {
