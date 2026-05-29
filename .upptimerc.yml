@@ -325,5 +325,5 @@ status-website:
     })();
 
 notifications:
-  - type: discord
+  - type: slack
     webhookUrl: $DISCORD_WEBHOOK_URL
