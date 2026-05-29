@@ -223,7 +223,24 @@ status-website:
       border-left-color: #10B981 !important;
     }
 
-    /* ── Group headers (injected by JS) ── */
+    /* ── Category headers: Apps / Sites ── */
+    .upptime-category-header {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: #111111;
+      margin: 40px 0 16px;
+      padding-top: 40px;
+      border-top: 1px solid #E5E5E0;
+    }
+    .upptime-category-header.first {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    /* ── Sub-group headers: Pour Decisions, Round on Me, etc. ── */
     .upptime-group-header {
       font-family: 'Inter', sans-serif;
       font-size: 11px;
@@ -231,14 +248,7 @@ status-website:
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #6B7280;
-      margin: 28px 0 4px;
-      padding-top: 28px;
-      border-top: 1px solid #E5E5E0;
-    }
-    .upptime-group-header:first-of-type {
-      margin-top: 0;
-      padding-top: 0;
-      border-top: none;
+      margin: 24px 0 4px;
     }
 
     /* ── Footer ── */
@@ -250,19 +260,19 @@ status-website:
     }
   js: |
     (function () {
-      var groups = {
-        'Pour Decisions': 'Pour Decisions',
-        'Pour Decisions API': 'Pour Decisions',
-        'Round on Me': 'Round on Me',
-        'Round on Me API': 'Round on Me',
-        'The Pollening': 'The Pollening',
-        'The Pollening API': 'The Pollening',
-        'SPF or RIP': 'SPF or RIP',
-        'SPF or RIP API': 'SPF or RIP',
-        'Project Website (madebyaaron.app)': 'Static Sites',
-        'Personal Website (aaronsentell.com)': 'Static Sites',
-        'Referral Site': 'Static Sites',
-        'Civic Site': 'Static Sites'
+      var siteMap = {
+        'Pour Decisions':                      { category: 'Apps', subGroup: 'Pour Decisions' },
+        'Pour Decisions API':                  { category: 'Apps', subGroup: 'Pour Decisions' },
+        'Round on Me':                         { category: 'Apps', subGroup: 'Round on Me' },
+        'Round on Me API':                     { category: 'Apps', subGroup: 'Round on Me' },
+        'The Pollening':                       { category: 'Apps', subGroup: 'The Pollening' },
+        'The Pollening API':                   { category: 'Apps', subGroup: 'The Pollening' },
+        'SPF or RIP':                          { category: 'Apps', subGroup: 'SPF or RIP' },
+        'SPF or RIP API':                      { category: 'Apps', subGroup: 'SPF or RIP' },
+        'Project Website (madebyaaron.app)':   { category: 'Sites', subGroup: null },
+        'Personal Website (aaronsentell.com)': { category: 'Sites', subGroup: null },
+        'Referral Site':                       { category: 'Sites', subGroup: null },
+        'Civic Site':                          { category: 'Sites', subGroup: null }
       };
 
       function insertHeaders() {
@@ -270,20 +280,33 @@ status-website:
         if (!section) return false;
         var articles = section.querySelectorAll('article');
         if (!articles.length) return false;
-        if (section.querySelector('.upptime-group-header')) return true;
+        if (section.querySelector('.upptime-category-header')) return true;
 
-        var lastGroup = null;
+        var lastCategory = null;
+        var lastSubGroup = null;
+
         articles.forEach(function (article) {
           var link = article.querySelector('a');
           if (!link) return;
           var name = link.textContent.trim();
-          var group = groups[name];
-          if (group && group !== lastGroup) {
-            var header = document.createElement('div');
-            header.className = 'upptime-group-header';
-            header.textContent = group;
-            section.insertBefore(header, article);
-            lastGroup = group;
+          var info = siteMap[name];
+          if (!info) return;
+
+          if (info.category !== lastCategory) {
+            var catHeader = document.createElement('div');
+            catHeader.className = 'upptime-category-header' + (lastCategory === null ? ' first' : '');
+            catHeader.textContent = info.category;
+            section.insertBefore(catHeader, article);
+            lastCategory = info.category;
+            lastSubGroup = null;
+          }
+
+          if (info.subGroup && info.subGroup !== lastSubGroup) {
+            var subHeader = document.createElement('div');
+            subHeader.className = 'upptime-group-header';
+            subHeader.textContent = info.subGroup;
+            section.insertBefore(subHeader, article);
+            lastSubGroup = info.subGroup;
           }
         });
         return true;
