@@ -1,20 +1,50 @@
-# Change these first
-owner: aaronsentell # Your GitHub organization or username, where this repository lives
-repo: my-status-page # The name of this repository
-
-# Setting to run once a year, because I'm controlling this with cron-job
+owner: aaronsentell
+repo: my-status-page
 workflow-schedules:
   uptime: "0 0 1 * *"
 
 sites:
+  # ── App projects ──────────────────────────────────────────────────────────
+  # Each app project gets two checks:
+  #   1. Base URL — verifies the Cloudflare Worker route is live and Pages is
+  #      serving. These three apps (Sunburn, Pollen, Round on Me) run a Worker
+  #      that proxies to a separate Pages deployment, so the two layers can fail
+  #      independently: a broken Pages deploy returns 5xx from the base URL while
+  #      the Worker is still alive, and a misconfigured Worker route returns 5xx
+  #      while Pages is fine. Both are real failure modes worth catching.
+  #   2. /api/health — verifies external dependencies the base URL check misses:
+  #      third-party APIs, KV bindings, and secrets. Returns 200 ok or 503
+  #      degraded with a JSON body describing what failed.
+  #
+  # Pour Choices is a Pages project with integrated Functions (same deployment),
+  # so the base URL and /api/health can't diverge on the Pages layer — but
+  # Supabase is an external dependency that /api/health catches independently.
+
   - name: Pour Decisions
     url: https://pour.madebyaaron.app
+  - name: Pour Decisions API
+    url: https://pour.madebyaaron.app/api/health
+
   - name: Round on Me
     url: https://round.madebyaaron.app
+  - name: Round on Me API
+    url: https://round.madebyaaron.app/api/health
+
   - name: The Pollening
     url: https://pollen.madebyaaron.app
+  - name: The Pollening API
+    url: https://pollen.madebyaaron.app/api/health
+
   - name: SPF or RIP
     url: https://burn.madebyaaron.app
+  - name: SPF or RIP API
+    url: https://burn.madebyaaron.app/api/health
+
+  # ── Static sites ──────────────────────────────────────────────────────────
+  # Pure static HTML — no backend, no API dependencies. Base URL is the only
+  # meaningful check. These are served directly by Cloudflare Pages or a CDN,
+  # so a 200 with content is sufficient confirmation they're up.
+
   - name: Project Website (madebyaaron.app)
     url: https://madebyaaron.app
   - name: Personal Website (aaronsentell.com)
@@ -25,7 +55,6 @@ sites:
     url: $CONTACT_REPS
 
 status-website:
-  # Your custom domain is set here
   cname: status.madebyaaron.app
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: Made by Aaron Status Page
@@ -37,7 +66,6 @@ status-website:
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
 
-# Discord notifications configuration
 notifications:
   - type: discord
     webhookUrl: $DISCORD_WEBHOOK_URL
