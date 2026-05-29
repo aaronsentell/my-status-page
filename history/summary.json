@@ -5,19 +5,17 @@
     "icon": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍸</text></svg>",
     "slug": "pour-decisions",
     "status": "up",
-    "uptime": "99.74%",
-    "uptimeDay": "99.66%",
-    "uptimeWeek": "99.74%",
-    "uptimeMonth": "99.74%",
-    "uptimeYear": "99.74%",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
     "time": 183,
     "timeDay": 165,
     "timeWeek": 183,
     "timeMonth": 183,
     "timeYear": 183,
-    "dailyMinutesDown": {
-      "2026-05-29": 5
-    }
+    "dailyMinutesDown": {}
   },
   {
     "name": "Pour Decisions API",
@@ -171,19 +169,17 @@
     "icon": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋</text></svg>",
     "slug": "personal-website-aaronsentell-com",
     "status": "up",
-    "uptime": "99.74%",
-    "uptimeDay": "99.67%",
-    "uptimeWeek": "99.74%",
-    "uptimeMonth": "99.74%",
-    "uptimeYear": "99.74%",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
     "time": 119,
     "timeDay": 115,
     "timeWeek": 119,
     "timeMonth": 119,
     "timeYear": 119,
-    "dailyMinutesDown": {
-      "2026-05-29": 5
-    }
+    "dailyMinutesDown": {}
   },
   {
     "name": "Referral Site",
