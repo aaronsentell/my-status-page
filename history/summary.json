@@ -169,19 +169,17 @@
     "icon": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋</text></svg>",
     "slug": "personal-website-aaronsentell-com",
     "status": "up",
-    "uptime": "99.79%",
-    "uptimeDay": "99.66%",
-    "uptimeWeek": "99.79%",
-    "uptimeMonth": "99.79%",
-    "uptimeYear": "99.79%",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
     "time": 118,
     "timeDay": 117,
     "timeWeek": 118,
     "timeMonth": 118,
     "timeYear": 118,
-    "dailyMinutesDown": {
-      "2026-05-29": 5
-    }
+    "dailyMinutesDown": {}
   },
   {
     "name": "Referral Site",
