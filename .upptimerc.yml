@@ -23,30 +23,38 @@ sites:
   - name: Pour Decisions
     url: https://pour.madebyaaron.app
     group: Pour Decisions
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍸</text></svg>"
   - name: Pour Decisions API
     url: https://pour.madebyaaron.app/api/health
     group: Pour Decisions
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍸</text></svg>"
 
   - name: Round on Me
     url: https://round.madebyaaron.app
     group: Round on Me
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥂</text></svg>"
   - name: Round on Me API
     url: https://round.madebyaaron.app/api/health
     group: Round on Me
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥂</text></svg>"
 
   - name: The Pollening
     url: https://pollen.madebyaaron.app
     group: The Pollening
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤧</text></svg>"
   - name: The Pollening API
     url: https://pollen.madebyaaron.app/api/health
     group: The Pollening
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤧</text></svg>"
 
   - name: SPF or RIP
     url: https://burn.madebyaaron.app
     group: SPF or RIP
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>"
   - name: SPF or RIP API
     url: https://burn.madebyaaron.app/api/health
     group: SPF or RIP
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>"
 
   # ── Static sites ──────────────────────────────────────────────────────────
   # Pure static HTML — no backend, no API dependencies. Base URL is the only
@@ -55,16 +63,20 @@ sites:
 
   - name: Project Website (madebyaaron.app)
     url: https://madebyaaron.app
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚗️</text></svg>"
   - name: Personal Website (aaronsentell.com)
     url: https://aaronsentell.com
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋</text></svg>"
   - name: Referral Site
     url: $REFERRAL_SITE
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔗</text></svg>"
   - name: Civic Site
     url: $CONTACT_REPS
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>"
 
 status-website:
   cname: status.madebyaaron.app
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
+  logoUrl: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚗️</text></svg>"
   name: Made by Aaron Status Page
   introTitle: "**App Status**"
   introMessage: Real-time monitoring and status page for my personal websites and projects.
