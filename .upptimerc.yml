@@ -24,7 +24,7 @@ sites:
     url: https://pour.madebyaaron.app
     group: Pour Decisions
     icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍸</text></svg>"
-    __dangerous__body_down_if_text_missing: ATLANTA HAPPY HOUR FINDER
+    __dangerous__body_down_if_text_missing: Atlanta Happy Hour Map
   - name: Pour Decisions API
     url: https://pour.madebyaaron.app/api/health
     group: Pour Decisions
@@ -72,7 +72,7 @@ sites:
   - name: Personal Website (aaronsentell.com)
     url: https://aaronsentell.com
     icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋</text></svg>"
-    __dangerous__body_down_if_text_missing: ATL-ien | Beltline Fiend
+    __dangerous__body_down_if_text_missing: Beltline Fiend
   - name: Referral Site
     url: $REFERRAL_SITE
     icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔗</text></svg>"
