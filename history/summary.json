@@ -23,38 +23,36 @@
     "icon": "https://icons.duckduckgo.com/ip3/round.madebyaaron.app.ico",
     "slug": "round-on-me",
     "status": "up",
-    "uptime": "99.40%",
-    "uptimeDay": "99.33%",
-    "uptimeWeek": "99.40%",
-    "uptimeMonth": "99.40%",
-    "uptimeYear": "99.40%",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
     "time": 125,
     "timeDay": 121,
     "timeWeek": 125,
     "timeMonth": 125,
     "timeYear": 125,
-    "dailyMinutesDown": {
-      "2026-05-29": 10
-    }
+    "dailyMinutesDown": {}
   },
   {
     "name": "The Pollening",
     "url": "https://pollen.madebyaaron.app",
     "icon": "https://icons.duckduckgo.com/ip3/pollen.madebyaaron.app.ico",
     "slug": "the-pollening",
-    "status": "down",
-    "uptime": "99.39%",
-    "uptimeDay": "99.31%",
-    "uptimeWeek": "99.39%",
-    "uptimeMonth": "99.39%",
-    "uptimeYear": "99.39%",
-    "time": 317,
-    "timeDay": 294,
-    "timeWeek": 317,
-    "timeMonth": 317,
-    "timeYear": 317,
+    "status": "up",
+    "uptime": "98.51%",
+    "uptimeDay": "98.31%",
+    "uptimeWeek": "98.51%",
+    "uptimeMonth": "98.51%",
+    "uptimeYear": "98.51%",
+    "time": 307,
+    "timeDay": 282,
+    "timeWeek": 307,
+    "timeMonth": 307,
+    "timeYear": 307,
     "dailyMinutesDown": {
-      "2026-05-29": 10
+      "2026-05-29": 24
     }
   },
   {
@@ -63,19 +61,17 @@
     "icon": "https://icons.duckduckgo.com/ip3/burn.madebyaaron.app.ico",
     "slug": "spf-or-rip",
     "status": "up",
-    "uptime": "99.43%",
-    "uptimeDay": "99.35%",
-    "uptimeWeek": "99.43%",
-    "uptimeMonth": "99.43%",
-    "uptimeYear": "99.43%",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
     "time": 1170,
     "timeDay": 1143,
     "timeWeek": 1170,
     "timeMonth": 1170,
     "timeYear": 1170,
-    "dailyMinutesDown": {
-      "2026-05-29": 9
-    }
+    "dailyMinutesDown": {}
   },
   {
     "name": "Project Website (madebyaaron.app)",
@@ -83,19 +79,17 @@
     "icon": "https://icons.duckduckgo.com/ip3/madebyaaron.app.ico",
     "slug": "project-website-madebyaaron-app",
     "status": "up",
-    "uptime": "99.42%",
-    "uptimeDay": "99.36%",
-    "uptimeWeek": "99.42%",
-    "uptimeMonth": "99.42%",
-    "uptimeYear": "99.42%",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
     "time": 397,
     "timeDay": 415,
     "timeWeek": 397,
     "timeMonth": 397,
     "timeYear": 397,
-    "dailyMinutesDown": {
-      "2026-05-29": 9
-    }
+    "dailyMinutesDown": {}
   },
   {
     "name": "Personal Website (aaronsentell.com)",
