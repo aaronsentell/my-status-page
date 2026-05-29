@@ -200,6 +200,17 @@ status-website:
     .bg-danger  { background-color: #EF4444 !important; }
     .bg-warning { background-color: #F59E0B !important; }
 
+    /* ── Status card left borders ── */
+    article.up       { border-left-color: #10B981 !important; }
+    article.down     { border-left-color: #EF4444 !important; }
+    article.degraded { border-left-color: #F59E0B !important; }
+
+    /* ── All systems operational banner ── */
+    .all-good, [class*="all-good"],
+    .status-ok, [class*="status-ok"] {
+      border-left-color: #10B981 !important;
+    }
+
     /* ── Group headers (injected by JS) ── */
     .upptime-group-header {
       font-family: 'Inter', sans-serif;
@@ -235,7 +246,11 @@ status-website:
         'The Pollening': 'The Pollening',
         'The Pollening API': 'The Pollening',
         'SPF or RIP': 'SPF or RIP',
-        'SPF or RIP API': 'SPF or RIP'
+        'SPF or RIP API': 'SPF or RIP',
+        'Project Website (madebyaaron.app)': 'Static Sites',
+        'Personal Website (aaronsentell.com)': 'Static Sites',
+        'Referral Site': 'Static Sites',
+        'Civic Site': 'Static Sites'
       };
 
       function insertHeaders() {
