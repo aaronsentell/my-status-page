@@ -22,23 +22,31 @@ sites:
 
   - name: Pour Decisions
     url: https://pour.madebyaaron.app
+    group: Pour Decisions
   - name: Pour Decisions API
     url: https://pour.madebyaaron.app/api/health
+    group: Pour Decisions
 
   - name: Round on Me
     url: https://round.madebyaaron.app
+    group: Round on Me
   - name: Round on Me API
     url: https://round.madebyaaron.app/api/health
+    group: Round on Me
 
   - name: The Pollening
     url: https://pollen.madebyaaron.app
+    group: The Pollening
   - name: The Pollening API
     url: https://pollen.madebyaaron.app/api/health
+    group: The Pollening
 
   - name: SPF or RIP
     url: https://burn.madebyaaron.app
+    group: SPF or RIP
   - name: SPF or RIP API
     url: https://burn.madebyaaron.app/api/health
+    group: SPF or RIP
 
   # ── Static sites ──────────────────────────────────────────────────────────
   # Pure static HTML — no backend, no API dependencies. Base URL is the only
@@ -65,6 +73,150 @@ status-website:
       href: /
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
+  customCss: |
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+    :root {
+      --accent: #FF4F1F;
+      --accent-light: #FFF0EB;
+      --bg: #FAFAF7;
+      --surface: #FFFFFF;
+      --text: #111111;
+      --muted: #6B7280;
+      --border: #E5E5E0;
+      --radius: 16px;
+      --shadow: 0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(0,0,0,.06);
+    }
+
+    /* ── Base ── */
+    html, body {
+      font-family: 'Inter', sans-serif !important;
+      background-color: var(--bg) !important;
+      color: var(--text) !important;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    /* ── Typography ── */
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6 {
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-weight: 700 !important;
+      letter-spacing: -0.01em;
+      color: var(--text) !important;
+    }
+
+    p, li, td, th, label, span {
+      font-family: 'Inter', sans-serif !important;
+    }
+
+    .text-muted, small, .small {
+      color: var(--muted) !important;
+      font-size: 13px;
+    }
+
+    /* ── Links ── */
+    a {
+      color: var(--accent) !important;
+      text-decoration: none;
+    }
+    a:hover {
+      color: var(--text) !important;
+      text-decoration: none;
+    }
+
+    /* ── Navbar ── */
+    nav, .navbar, header {
+      background-color: var(--surface) !important;
+      border-bottom: 1px solid var(--border) !important;
+      box-shadow: none !important;
+    }
+
+    .navbar-brand, .site-name, nav .brand {
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-weight: 700 !important;
+      font-size: 18px !important;
+      letter-spacing: -0.01em;
+      color: var(--text) !important;
+    }
+
+    .nav-link, .navbar-nav a {
+      font-size: 14px !important;
+      font-weight: 500 !important;
+      color: var(--muted) !important;
+    }
+    .nav-link:hover, .navbar-nav a:hover {
+      color: var(--accent) !important;
+    }
+
+    /* ── Cards / status items ── */
+    .card, .status-card, [class*="status-item"] {
+      background: var(--surface) !important;
+      border: 1px solid var(--border) !important;
+      border-radius: var(--radius) !important;
+      box-shadow: var(--shadow) !important;
+    }
+
+    .card-body {
+      padding: 24px !important;
+    }
+
+    /* ── Status badges ── */
+    .badge, .pill, [class*="badge"] {
+      font-family: 'Inter', sans-serif !important;
+      font-size: 11px !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.06em !important;
+      text-transform: uppercase !important;
+      border-radius: 100px !important;
+      padding: 4px 10px !important;
+    }
+
+    /* Operational */
+    .badge-success, .badge.bg-success,
+    [class*="operational"], [class*="up"] .badge {
+      background-color: #DCFCE7 !important;
+      color: #15803D !important;
+    }
+
+    /* Down */
+    .badge-danger, .badge.bg-danger,
+    [class*="down"] .badge {
+      background-color: #FEE2E2 !important;
+      color: #B91C1C !important;
+    }
+
+    /* Degraded */
+    .badge-warning, .badge.bg-warning,
+    [class*="degraded"] .badge {
+      background-color: #FEF9C3 !important;
+      color: #854D0E !important;
+    }
+
+    /* ── Uptime bars ── */
+    .bg-success { background-color: #10B981 !important; }
+    .bg-danger  { background-color: #EF4444 !important; }
+    .bg-warning { background-color: #F59E0B !important; }
+
+    /* ── Group headers ── */
+    .status-group-heading, [class*="group"] > h2,
+    [class*="group"] > h3 {
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-size: 11px !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.1em !important;
+      text-transform: uppercase !important;
+      color: var(--muted) !important;
+      margin-bottom: 12px !important;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border) !important;
+      background-color: var(--bg) !important;
+      color: var(--muted) !important;
+      font-size: 13px !important;
+    }
 
 notifications:
   - type: discord
