@@ -24,6 +24,7 @@ sites:
     url: https://pour.madebyaaron.app
     group: Pour Decisions
     icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍸</text></svg>"
+    __dangerous__body_down_if_text_missing: ATLANTA HAPPY HOUR FINDER
   - name: Pour Decisions API
     url: https://pour.madebyaaron.app/api/health
     group: Pour Decisions
@@ -33,6 +34,7 @@ sites:
     url: https://round.madebyaaron.app
     group: Round on Me
     icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥂</text></svg>"
+    __dangerous__body_down_if_text_missing: Enter a round code
   - name: Round on Me API
     url: https://round.madebyaaron.app/api/health
     group: Round on Me
@@ -42,6 +44,7 @@ sites:
     url: https://pollen.madebyaaron.app
     group: The Pollening
     icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤧</text></svg>"
+    __dangerous__body_down_if_text_missing: Atlanta Pollen Count
   - name: The Pollening API
     url: https://pollen.madebyaaron.app/api/health
     group: The Pollening
@@ -51,6 +54,7 @@ sites:
     url: https://burn.madebyaaron.app
     group: SPF or RIP
     icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>"
+    __dangerous__body_down_if_text_missing: Atlanta's sunburn timer
   - name: SPF or RIP API
     url: https://burn.madebyaaron.app/api/health
     group: SPF or RIP
@@ -64,9 +68,11 @@ sites:
   - name: Project Website (madebyaaron.app)
     url: https://madebyaaron.app
     icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚗️</text></svg>"
+    __dangerous__body_down_if_text_missing: Welcome to my 2 AM ideas
   - name: Personal Website (aaronsentell.com)
     url: https://aaronsentell.com
     icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋</text></svg>"
+    __dangerous__body_down_if_text_missing: ATL-ien | Beltline Fiend
   - name: Referral Site
     url: $REFERRAL_SITE
     icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔗</text></svg>"
