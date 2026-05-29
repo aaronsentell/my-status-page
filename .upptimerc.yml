@@ -200,16 +200,22 @@ status-website:
     .bg-danger  { background-color: #EF4444 !important; }
     .bg-warning { background-color: #F59E0B !important; }
 
-    /* ── Group headers ── */
-    .status-group-heading, [class*="group"] > h2,
-    [class*="group"] > h3 {
-      font-family: 'Space Grotesk', sans-serif !important;
-      font-size: 11px !important;
-      font-weight: 600 !important;
-      letter-spacing: 0.1em !important;
-      text-transform: uppercase !important;
-      color: var(--muted) !important;
-      margin-bottom: 12px !important;
+    /* ── Group headers (injected by JS) ── */
+    .upptime-group-header {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #6B7280;
+      margin: 28px 0 4px;
+      padding-top: 28px;
+      border-top: 1px solid #E5E5E0;
+    }
+    .upptime-group-header:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
     }
 
     /* ── Footer ── */
@@ -219,6 +225,45 @@ status-website:
       color: var(--muted) !important;
       font-size: 13px !important;
     }
+  js: |
+    (function () {
+      var groups = {
+        'Pour Decisions': 'Pour Decisions',
+        'Pour Decisions API': 'Pour Decisions',
+        'Round on Me': 'Round on Me',
+        'Round on Me API': 'Round on Me',
+        'The Pollening': 'The Pollening',
+        'The Pollening API': 'The Pollening',
+        'SPF or RIP': 'SPF or RIP',
+        'SPF or RIP API': 'SPF or RIP'
+      };
+
+      function insertHeaders() {
+        var section = document.querySelector('section.live-status');
+        if (!section) return;
+        var articles = section.querySelectorAll('article');
+        if (!articles.length || section.querySelector('.upptime-group-header')) return;
+
+        var lastGroup = null;
+        articles.forEach(function (article) {
+          var link = article.querySelector('a');
+          if (!link) return;
+          var name = link.textContent.trim();
+          var group = groups[name];
+          if (group && group !== lastGroup) {
+            var header = document.createElement('div');
+            header.className = 'upptime-group-header';
+            header.textContent = group;
+            section.insertBefore(header, article);
+            lastGroup = group;
+          }
+        });
+      }
+
+      var observer = new MutationObserver(insertHeaders);
+      observer.observe(document.body, { childList: true, subtree: true });
+      document.addEventListener('DOMContentLoaded', insertHeaders);
+    })();
 
 notifications:
   - type: discord
