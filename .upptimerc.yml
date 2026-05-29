@@ -60,6 +60,12 @@ sites:
     group: SPF or RIP
     icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>"
 
+  - name: Fix It, Atlanta
+    url: https://fixit.madebyaaron.app
+    group: Fix It, Atlanta
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚧</text></svg>"
+    __dangerous__body_down_if_text_missing: Fix It, Atlanta
+
   # ── Static sites ──────────────────────────────────────────────────────────
   # Pure static HTML — no backend, no API dependencies. Base URL is the only
   # meaningful check. These are served directly by Cloudflare Pages or a CDN,
@@ -275,6 +281,7 @@ status-website:
         'The Pollening API':                   { category: 'Apps', subGroup: 'The Pollening' },
         'SPF or RIP':                          { category: 'Apps', subGroup: 'SPF or RIP' },
         'SPF or RIP API':                      { category: 'Apps', subGroup: 'SPF or RIP' },
+        'Fix It, Atlanta':                     { category: 'Apps', subGroup: 'Fix It, Atlanta' },
         'Project Website (madebyaaron.app)':   { category: 'Sites', subGroup: null },
         'Personal Website (aaronsentell.com)': { category: 'Sites', subGroup: null },
         'Referral Site':                       { category: 'Sites', subGroup: null },
