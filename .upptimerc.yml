@@ -240,9 +240,10 @@ status-website:
 
       function insertHeaders() {
         var section = document.querySelector('section.live-status');
-        if (!section) return;
+        if (!section) return false;
         var articles = section.querySelectorAll('article');
-        if (!articles.length || section.querySelector('.upptime-group-header')) return;
+        if (!articles.length) return false;
+        if (section.querySelector('.upptime-group-header')) return true;
 
         var lastGroup = null;
         articles.forEach(function (article) {
@@ -258,11 +259,13 @@ status-website:
             lastGroup = group;
           }
         });
+        return true;
       }
 
-      var observer = new MutationObserver(insertHeaders);
-      observer.observe(document.body, { childList: true, subtree: true });
-      document.addEventListener('DOMContentLoaded', insertHeaders);
+      var interval = setInterval(function () {
+        if (insertHeaders()) clearInterval(interval);
+      }, 200);
+      setTimeout(function () { clearInterval(interval); }, 30000);
     })();
 
 notifications:
